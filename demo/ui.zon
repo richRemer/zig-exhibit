@@ -1,0 +1,17 @@
+.{
+    .MainWindow = .{
+        .extends = .Window,
+        .title = "Exhibit Toolkit Demo",
+        .bg_color = .ghost_white,
+        .fg_color = .dark_slate_gray,
+        .contains = .{
+            .extends = .LinearLayout,
+            .flow = .vertical,
+            .layout = .{
+                .extends = .Label,
+                .gravity = .center,
+                .text = "zigga what?",
+            },
+        },
+    },
+}
