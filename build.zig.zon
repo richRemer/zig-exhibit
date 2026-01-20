@@ -5,8 +5,8 @@
     .minimum_zig_version = "0.15.2",
     .dependencies = .{
         .xzbt = .{
-            .url = "https://github.com/richRemer/zig-xzbt/archive/refs/heads/master.tar.gz",
-            .hash = "xzbt-0.0.0-BEJGVa9qAAC9VvDE0XHvEzpg_Gx0xA_xxd56Lg6RfR1Y",
+            .url = "https://github.com/richRemer/zig-xzbt/archive/refs/heads/testing.tar.gz",
+            .hash = "xzbt-0.0.0-BEJGVURrAADP2WvrnRPpeLHAVLijQWZPWJZ8JHU14Evu",
         },
     },
     .paths = .{
