@@ -21,3 +21,7 @@ pub fn init(options: Options) App {
 pub fn deinit(this: App) void {
     this.conn.close();
 }
+
+pub fn flush(this: App) void {
+    this.conn.flush();
+}

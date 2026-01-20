@@ -11,7 +11,7 @@ pub fn main() !void {
     defer win.deinit();
 
     win.show();
-    app.conn.flush();
+    app.flush();
 
     std.Thread.sleep(5000000000);
 }
