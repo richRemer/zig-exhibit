@@ -1,11 +1,11 @@
 const xzbt = @import("xzbt");
-const ToolKit = @import("ToolKit.zig");
+const App = @import("App.zig");
 const Window = @This();
 
 window: xzbt.Window,
 
-pub fn init(tk: ToolKit) Window {
-    const conn = tk.conn;
+pub fn init(app: App) Window {
+    const conn = app.conn;
     const screen = conn.getScreen(conn.default_screen).?;
     const root = screen.ptr.root;
 

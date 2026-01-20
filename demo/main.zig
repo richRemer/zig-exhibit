@@ -4,14 +4,14 @@ const ui = @import("ui.zon");
 
 pub fn main() !void {
     const allocator = std.heap.smp_allocator;
-    const tk = try exhibit.ToolKit.init(.{ .allocator = allocator });
-    defer tk.deinit();
+    const app = exhibit.App.init(.{ .allocator = allocator });
+    defer app.deinit();
 
-    const win = exhibit.Window.init(tk);
+    const win = exhibit.Window.init(app);
     defer win.deinit();
 
     win.show();
-    tk.conn.flush();
+    app.conn.flush();
 
     std.Thread.sleep(5000000000);
 }
