@@ -10,6 +10,7 @@ pub fn main() !void {
     const win = exhibit.Window.init(app);
     defer win.deinit();
 
+    win.setTitle("hello?");
     win.show();
     app.flush();
 
