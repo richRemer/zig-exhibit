@@ -6,7 +6,7 @@
     .dependencies = .{
         .xzbt = .{
             .url = "https://github.com/richRemer/zig-xzbt/archive/refs/heads/master.tar.gz",
-            .hash = "xzbt-0.0.0-BEJGVWVuAACOcdOgfqm3hNk9uHxF5C7qXHcUeaCFvW3h",
+            .hash = "xzbt-0.0.0-BEJGVWeCAAAhP27btNmwhT_cxNeYrEhh_pH0e00DreR_",
         },
     },
     .paths = .{

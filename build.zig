@@ -47,5 +47,6 @@ pub fn build(b: *std.Build) void {
     const run_mod_tests = b.addRunArtifact(mod_tests);
     const test_step = b.step("test", "Run tests");
 
+    mod_tests.linkLibC();
     test_step.dependOn(&run_mod_tests.step);
 }
