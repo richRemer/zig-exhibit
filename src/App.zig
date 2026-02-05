@@ -1,3 +1,5 @@
+//! Top-level Exhibit application object.
+
 const std = @import("std");
 const xzbt = @import("xzbt");
 const Allocator = std.mem.Allocator;
@@ -7,7 +9,7 @@ const App = @This();
 allocator: Allocator,
 state: *State,
 
-/// Exhibit applications configuration.
+/// Exhibit application configuration.
 pub const Options = struct {
     /// Allocator used to acquire memory needed by the application.
     allocator: Allocator,

@@ -1,3 +1,5 @@
+//! Window resource.
+
 const xzbt = @import("xzbt");
 const App = @import("App.zig");
 const Window = @This();
@@ -5,6 +7,8 @@ const Window = @This();
 app: App,
 window: xzbt.Window,
 
+/// Initialize a new window.  The window is hidden until its .show() method is
+/// called.
 pub fn init(app: App) Window {
     var values: [3]xzbt.Value = undefined;
     var atoms: [1]xzbt.Atom = undefined;
@@ -42,18 +46,22 @@ pub fn init(app: App) Window {
     return .{ .app = app, .window = window };
 }
 
+/// Cleanup window resource.
 pub fn deinit(this: Window) void {
     this.window.destroy(this.getConnection());
 }
 
+/// Return the raw connection used to initialize this window.
 pub fn getConnection(this: Window) xzbt.Connection {
     return this.app.getConnection();
 }
 
+/// Hide (unmap) the window.
 pub fn hide(this: Window) void {
     this.window.unmap(this.getConnection());
 }
 
+/// Change the window title.
 pub fn setTitle(this: Window, title: []const u8) void {
     this.window.changeProperty(
         this.getConnection(),
@@ -65,6 +73,7 @@ pub fn setTitle(this: Window, title: []const u8) void {
     );
 }
 
+/// Show (map) the window.
 pub fn show(this: Window) void {
     this.window.map(this.getConnection());
 }
