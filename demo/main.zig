@@ -12,7 +12,7 @@ pub fn main() !void {
     const win = exhibit.Window.init(app);
     defer win.deinit();
 
-    const draw = exhibit.Drawable.init(app, win.window.id, .{
+    const draw = exhibit.Drawable.initWithWindow(win, .{
         .fg = 0x000000,
         .bg = 0xFFFFFF,
         .font = font,

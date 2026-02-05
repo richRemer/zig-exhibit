@@ -2,6 +2,7 @@ const std = @import("std");
 const xzbt = @import("xzbt");
 const App = @import("App.zig");
 const Font = @import("Font.zig");
+const Window = @import("Window.zig");
 const Drawable = @This();
 
 drawable: xzbt.Drawable,
@@ -39,6 +40,10 @@ pub fn init(
             }),
         },
     };
+}
+
+pub fn initWithWindow(window: Window, options: Options) Drawable {
+    return Drawable.init(window.app, window.window.id, options);
 }
 
 pub fn deinit(this: Drawable) void {
